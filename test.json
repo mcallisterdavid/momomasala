@@ -1,0 +1,14 @@
+{
+  "Menu Items": [
+    {
+      "Title": "Gergot Food",
+      "Price": 42,
+      "Desc": "This is a sample donkey description."
+    },
+    {
+      "Title": "Gergot Food 2",
+      "Price": 43,
+      "Desc": "This is a second sample donkey description."
+    }
+  ]
+}

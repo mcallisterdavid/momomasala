@@ -1,0 +1,94 @@
+
+<head>
+<style>
+*, *:after, *:before {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width: 50%;
+  margin: 1em auto;
+  border: 1px solid #ddd;
+  padding: .3em .6em;
+}
+
+.group-header {
+  float: right;
+  font-weight: 700;
+  width: 8%;
+  margin: .7em 0 1em 0;
+}
+
+.item {
+  position: relative;
+  font-weight: 700;
+  margin: .7em 0 1em 0;
+  float: right;
+
+  }
+
+h3 {
+  position: relative;
+  font-weight: 700;
+  margin: 0.9em 0 1em 0;
+  }
+  .dots {
+    width: 40%;
+    border-bottom: 2px dotted #ccc;
+    margin-top: .8em;
+  }
+
+  h5 {
+  position: relative;
+  color: grey;
+  font-weight: 400;
+  margin-right: 10px;
+}
+}
+
+
+</style>
+<script type="text/javascript">
+function test() {
+  return "donkeydoodoo";
+}
+</script>
+</head>
+
+
+<div class="container">
+  <div class="group-header">
+  </div>
+  <div id="donkey">
+
+
+  <script>
+  console.log("donkey");
+  var menu = document.getElementById('donkey');
+
+  const json = '{"Menu": [{"Title": "Gergot Food","Price": 42,"Desc": "This is a sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."},{"Title": "Gergot Food 2","Price": 43,"Desc": "This is a second sample donkey description."}]}';
+
+  const obj = JSON.parse(json);
+  console.log(obj.Menu);
+
+  function donker(item, index) {
+    var title = '<h3 style="float:left;"><span>' + item.Title + '</span></h3>'
+    menu.insertAdjacentHTML('beforeend', title)
+
+    var price = '<h3 style="float:right; margin-right: 6%;"><span>' + item.Price + '</span></h3>'
+    menu.insertAdjacentHTML('beforeend', price)
+
+    var dots = '<h5 style="float:right;"><span>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span></h3>'
+    menu.insertAdjacentHTML('beforeend', dots)
+
+    var desc = '<p style="position: relative; margin: -0.7em 6em 0 0; display: inline-block;">' + item.Desc + '</p>'
+    menu.insertAdjacentHTML('beforeend', desc)
+
+    console.log("donker", item.Title)
+  }
+
+  obj.Menu.forEach(donker)
+  </script>
+  
+</div>
