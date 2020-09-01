@@ -46,16 +46,8 @@ h3 {
   margin-right: 10px;
 }
 }
-
-
 </style>
-<script type="text/javascript">
-function test() {
-  return "donkeydoodoo";
-}
-</script>
 </head>
-
 
 <div class="container">
   <div class="group-header">
@@ -72,7 +64,7 @@ function test() {
   const obj = JSON.parse(json);
   console.log(obj.Menu);
 
-  function donker(item, index) {
+  function generateItem(item, index) {
     var title = '<h3 style="float:left;"><span>' + item.Title + '</span></h3>'
     menu.insertAdjacentHTML('beforeend', title)
 
@@ -85,10 +77,10 @@ function test() {
     var desc = '<p style="position: relative; margin: -0.7em 6em 0 0; display: inline-block;">' + item.Desc + '</p>'
     menu.insertAdjacentHTML('beforeend', desc)
 
-    console.log("donker", item.Title)
+    console.log("Iterated", item.Title)
   }
 
-  obj.Menu.forEach(donker)
+  obj.Menu.forEach(generateItem)
   </script>
   
 </div>
